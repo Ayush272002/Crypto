@@ -4,8 +4,15 @@ import Button from "../../Common/Button/Button";
 import gradient from "../../../assets/gradient.png";
 import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const MainComponent = () => {
+  const navigate = useNavigate();
+
+  const handleDashboardClick = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className="flex-info">
       <div className="left-component">
@@ -31,7 +38,7 @@ const MainComponent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1, ease: "easeOut" }}
         >
-          Track crypto through a public api in real time. Visit the dashboard to
+          Track crypto through a public API in real time. Visit the dashboard to
           do so!
         </motion.p>
         <motion.div
@@ -40,7 +47,7 @@ const MainComponent = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
         >
-          <Button text={"dashboard"} />
+          <Button text={"dashboard"} onClick={handleDashboardClick} />
           <Button text={"share"} outlined={true} />
         </motion.div>
       </div>
