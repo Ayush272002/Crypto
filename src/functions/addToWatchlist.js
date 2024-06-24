@@ -8,7 +8,7 @@ export const addToWatchlist = (id) => {
       localStorage.setItem("watchlist", JSON.stringify(arr));
     }
   } else {
-    var arr = JSON.stringify([id]);
+    let arr = JSON.stringify([id]);
     localStorage.setItem("watchlist", arr);
   }
   toast.success(
