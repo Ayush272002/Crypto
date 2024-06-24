@@ -18,15 +18,16 @@ function DashboardPage() {
 
   const handlePageChange = (event, value) => {
     setPageNumber(value);
-    var startingIndex = (value - 1) * 10;
+    let startingIndex = (value - 1) * 10;
     setPaginatedCoins(coins.slice(startingIndex, startingIndex + 10));
+    window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
   const onChange = (e) => {
     setSearch(e.target.value);
   };
 
-  var filteredCoins = coins.filter((coin) => {
+  let filteredCoins = coins.filter((coin) => {
     if (
       coin.name.toLowerCase().includes(search.toLowerCase()) ||
       coin.symbol.toLowerCase().includes(search.toLowerCase())
