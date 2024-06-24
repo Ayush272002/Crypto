@@ -1,12 +1,9 @@
 import React from "react";
+import NorthRoundedIcon from "@mui/icons-material/NorthRounded";
 import "./styles.css";
-import ArrowUpwardRoundedIcon from "@mui/icons-material/ArrowUpwardRounded";
-
-const BackToTop = () => {
-  // Get the button
+function TopButton() {
   let mybutton = document.getElementById("myBtn");
 
-  // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
   };
@@ -22,16 +19,16 @@ const BackToTop = () => {
     }
   }
 
-  // When the user clicks on the button, scroll to the top of the document
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   return (
-    <div className="back-to-top-btn" id="myBtn" onClick={() => topFunction()}>
-      <ArrowUpwardRoundedIcon style={{ color: "var(--blue" }} />
+    <div className="top-btn" id="myBtn" onClick={() => topFunction()}>
+      <NorthRoundedIcon className="top-icon" sx={{ fontSize: "2rem" }} />
     </div>
   );
-};
+}
 
-export default BackToTop;
+export default TopButton;

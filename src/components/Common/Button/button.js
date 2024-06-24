@@ -1,15 +1,15 @@
 import React from "react";
 import "./styles.css";
 
-const Button = ({ text, onClick, outlined }) => {
+function Button({ text, onClick, outlined }) {
   return (
     <div
-      className={outlined ? "outlined-btn" : "btn"}
+      className={outlined ? "btn-outlined" : "btn-div"}
       onClick={() => onClick()}
     >
       {text}
     </div>
   );
-};
+}
 
 export default Button;

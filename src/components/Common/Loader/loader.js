@@ -4,7 +4,7 @@ import "./styles.css";
 
 function Loader() {
   return (
-    <div className="loader-container">
+    <div className="loader-wrapper">
       <CircularProgress />
     </div>
   );
