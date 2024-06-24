@@ -66,7 +66,7 @@ To run Omnimind locally, follow these steps:
    npm start
    ```
 
-5. Open your browser and visit `http://localhost:5173` to use Omnimind.
+5. Open your browser and visit `http://localhost:3000` to use Crypto.
 
 ## Contributing
 
